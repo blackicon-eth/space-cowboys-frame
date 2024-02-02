@@ -3,17 +3,17 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest): Promise<Response> {
   const data = await req.json();
   console.log(data);
-  const buttonId = data.untrustedData.buttonIndex;
+  /*const buttonId = data.untrustedData.buttonIndex;
 
   let path: string;
   if (buttonId === 1) {
     path = "spacecowboys";
   } else {
     path = "";
-  }
+  }*/
   const headers = new Headers();
   headers.set("Location", `${process.env.NEXT_PUBLIC_BASE_URL}/`);
-  const response = NextResponse.redirect(`${process.env.NEXT_PUBLIC_BASE_URL}/${path}`, {
+  const response = NextResponse.redirect(`${process.env.NEXT_PUBLIC_BASE_URL}/spacecowboys`, {
     headers: headers,
     status: 302,
   });
