@@ -7,17 +7,17 @@ const frameMetadata = getFrameMetadata({
       label: "Begin",
     },
   ],
-  image: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmUBYmmRJ13ndJapNWmG1XraPVsDv5VeCChfmu9qHAQTQi/0.png`,
+  image: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmR5nbUdQN5H1s28Tuuk62KAeFfD6eq5sSiXbR6thqUg7q/0.png`,
   post_url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
 });
 
 export const metadata: Metadata = {
-  title: "Metal Slug Prisoner",
-  description: "A Frame where you can set the MS prisoner free",
+  title: "A slightly different Cosmic Cowboy",
+  description: "Life is but a dream...",
   openGraph: {
-    title: "Metal Slug Prisoner",
-    description: "A Frame where you can set the MS prisoner free",
-    images: [`${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmUBYmmRJ13ndJapNWmG1XraPVsDv5VeCChfmu9qHAQTQi/0.png`],
+    title: "A slightly different Cosmic Cowboy",
+    description: "Life is but a dream...",
+    images: [`${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmR5nbUdQN5H1s28Tuuk62KAeFfD6eq5sSiXbR6thqUg7q/0.png`],
   },
   other: {
     ...frameMetadata,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>Metal Slug Prisoner</h1>
+      <h1>See you Space Cowboy...</h1>
     </>
   );
 }
