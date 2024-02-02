@@ -13,7 +13,8 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     <meta property="fc:frame" content="vNext" />
     <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmR5nbUdQN5H1s28Tuuk62KAeFfD6eq5sSiXbR6thqUg7q/3.jpg" />
     <meta property="fc:frame:button:1" content="See you Space Cowboy..." />
-    <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/spacecowboys" />
+    <meta property="fc:frame:button:1:action" content="post_redirect" />
+    <meta property="fc:frame:post_url" content="https://www.youtube.com/watch?v=Ru_H5PiyfSA" />
   </head></html>`);
   } else {
     return new NextResponse(`<!DOCTYPE html><html><head>
