@@ -3,8 +3,9 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest): Promise<Response> {
   const data = await req.json();
   console.log(data);
-  /*const buttonId = data.untrustedData.buttonIndex;
-
+  const buttonId = data.untrustedData.buttonIndex;
+  console.log(buttonId);
+  /*
   let path: string;
   if (buttonId === 1) {
     path = "spacecowboys";
