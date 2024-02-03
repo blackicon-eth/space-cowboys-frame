@@ -13,6 +13,7 @@ export async function POST(req: NextRequest): Promise<Response> {
   }
 
   return NextResponse.redirect(`${process.env.NEXT_PUBLIC_BASE_URL}/${path}`, { status: 302 });
+
   /*const headers = new Headers();
   headers.set("Location", `${process.env.NEXT_PUBLIC_BASE_URL}/`);
   const response = NextResponse.redirect(`${process.env.NEXT_PUBLIC_BASE_URL}/${path}`, {
