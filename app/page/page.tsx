@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function Page() {
-  redirect("http://space-cowboys-frame.vercel.app/spacecowboys");
+  redirect("https://www.youtube.com/watch?v=Ru_H5PiyfSA");
 }
