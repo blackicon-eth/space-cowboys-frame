@@ -18,7 +18,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
           },
         ],
         image: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmR5nbUdQN5H1s28Tuuk62KAeFfD6eq5sSiXbR6thqUg7q/3.jpg`,
-        post_url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/end`,
+        post_url: `${process.env.NEXT_PUBLIC_BASE_URL}/redirect`,
       })
     );
   } else {

@@ -7,13 +7,13 @@ export async function POST(req: NextRequest): Promise<Response> {
 
   let path: string;
   if (buttonId === 1) {
-    path = "spacecowboys";
+    path = "https://www.youtube.com/watch?v=Ru_H5PiyfSA";
   } else {
     path = "";
   }
 
   return new NextResponse(null, {
-    headers: { Location: `${process.env.NEXT_PUBLIC_BASE_URL}/${path}` },
+    headers: { Location: path },
     status: 302,
   });
 }
