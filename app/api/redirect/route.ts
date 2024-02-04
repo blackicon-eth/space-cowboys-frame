@@ -11,13 +11,11 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   } else {
     path = "";
   }
-  const location = `https://space-cowboys-frame.vercel.app/${path}`;
-  console.log(location);
+  const location = `${process.env.NEXT_PUBLIC_BASE_URL}/${path}`;
   return NextResponse.redirect(location, { status: 302 });
 }
 
 export async function POST(req: NextRequest): Promise<Response> {
-  console.log("Managing POST call...");
   return getResponse(req);
 }
 
