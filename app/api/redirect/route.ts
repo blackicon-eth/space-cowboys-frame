@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: NextRequest): Promise<Response> {
+export async function getResponse(req: NextRequest): Promise<NextResponse> {
   const data = await req.json();
   console.log(data);
   const buttonId = data.untrustedData.buttonIndex;
@@ -11,11 +11,12 @@ export async function POST(req: NextRequest): Promise<Response> {
   } else {
     path = "";
   }
+  const location = `${process.env.NEXT_PUBLIC_BASE_URL}/${path}`;
+  return NextResponse.redirect(location, { status: 302 });
+}
 
-  return new NextResponse(null, {
-    headers: { Location: `${process.env.NEXT_PUBLIC_BASE_URL}/${path}` },
-    status: 302,
-  });
+export async function POST(req: NextRequest): Promise<Response> {
+  return getResponse(req);
 }
 
 export const dynamic = "force-dynamic";
