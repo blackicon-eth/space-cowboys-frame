@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function getResponse(req: NextRequest): Promise<NextResponse> {
+async function getResponse(req: NextRequest): Promise<NextResponse> {
   const data = await req.json();
   console.log(data);
   const buttonId = data.untrustedData.buttonIndex;
